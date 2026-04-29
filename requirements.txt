@@ -1,0 +1,8 @@
+Imported libraries for working in Python
+
+pandas
+matplotlib
+numpy
+scipy
+seaborn
+statsmodels

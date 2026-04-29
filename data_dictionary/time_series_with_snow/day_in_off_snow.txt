@@ -1,0 +1,72 @@
+✅ Procesado correctamente: Bassa_Nera.csv
+📅 Bassa_Nera_periodo_nieve.csv — Periodos de nieve por temporada:
+   🧊 Temporada 2015-2016 ➤ Snow in: 03/12/2015 | Snow off: 01/05/2016
+   🧊 Temporada 2016-2017 ➤ Snow in: 07/11/2016 | Snow off: 11/04/2017
+   🧊 Temporada 2017-2018 ➤ Snow in: 07/11/2017 | Snow off: 26/04/2018
+   🧊 Temporada 2018-2019 ➤ Snow in: 07/11/2018 | Snow off: 27/03/2019
+   🧊 Temporada 2019-2020 ➤ Snow in: 27/11/2019 | Snow off: 21/03/2020
+   🧊 Temporada 2020-2021 ➤ Snow in: 27/09/2020 | Snow off: 01/03/2021
+   🧊 Temporada 2021-2022 ➤ Snow in: 16/12/2021 | Snow off: 15/04/2022
+   🧊 Temporada 2022-2023 ➤ Snow in: 06/11/2022 | Snow off: 16/03/2023
+   🧊 Temporada 2023-2024 ➤ Snow in: 26/11/2023 | Snow off: 04/04/2024
+   🧊 Temporada 2024-2025 ➤ Snow in: 15/12/2024 | Snow off: 16/04/2025
+✅ Procesado correctamente: Clots_de_Rialba.csv
+📅 Clots_de_Rialba_periodo_nieve.csv — Periodos de nieve por temporada:
+   🧊 Temporada 2015-2016 ➤ Snow in: 03/12/2015 | Snow off: 01/05/2016
+   🧊 Temporada 2016-2017 ➤ Snow in: 07/11/2016 | Snow off: 01/05/2017
+   🧊 Temporada 2017-2018 ➤ Snow in: 07/11/2017 | Snow off: 11/05/2018
+   🧊 Temporada 2018-2019 ➤ Snow in: 17/11/2018 | Snow off: 01/05/2019
+   🧊 Temporada 2019-2020 ➤ Snow in: 27/11/2019 | Snow off: 05/04/2020
+   🧊 Temporada 2020-2021 ➤ Snow in: 27/09/2020 | Snow off: 05/04/2021
+   🧊 Temporada 2021-2022 ➤ Snow in: 06/11/2021 | Snow off: 15/04/2022
+   🧊 Temporada 2022-2023 ➤ Snow in: 06/11/2022 | Snow off: 16/03/2023
+   🧊 Temporada 2023-2024 ➤ Snow in: 26/11/2023 | Snow off: 09/04/2024
+   🧊 Temporada 2024-2025 ➤ Snow in: 05/12/2024 | Snow off: 24/04/2025
+✅ Procesado correctamente: Estanyeres.csv
+📅 Estanyeres_periodo_nieve.csv — Periodos de nieve por temporada:
+   🧊 Temporada 2015-2016 ➤ Snow in: 03/12/2015 | Snow off: 01/04/2016
+   🧊 Temporada 2016-2017 ➤ Snow in: 27/11/2016 | Snow off: 06/04/2017
+   🧊 Temporada 2017-2018 ➤ Snow in: 07/11/2017 | Snow off: 26/04/2018
+   🧊 Temporada 2018-2019 ➤ Snow in: 02/11/2018 | Snow off: 26/04/2019
+   🧊 Temporada 2019-2020 ➤ Snow in: 12/11/2019 | Snow off: 10/04/2020
+   🧊 Temporada 2020-2021 ➤ Snow in: 27/09/2020 | Snow off: 01/03/2021
+   🧊 Temporada 2021-2022 ➤ Snow in: 26/11/2021 | Snow off: 10/04/2022
+   🧊 Temporada 2022-2023 ➤ Snow in: 06/11/2022 | Snow off: 06/03/2023
+   🧊 Temporada 2023-2024 ➤ Snow in: 26/11/2023 | Snow off: 04/04/2024
+   🧊 Temporada 2024-2025 ➤ Snow in: 10/12/2024 | Snow off: 16/04/2025
+✅ Procesado correctamente: Plan_deth_Horn.csv
+📅 Plan_deth_Horn_periodo_nieve.csv — Periodos de nieve por temporada:
+   🧊 Temporada 2015-2016 ➤ Snow in: 03/12/2015 | Snow off: 11/04/2016
+   🧊 Temporada 2016-2017 ➤ Snow in: 07/11/2016 | Snow off: 21/04/2017
+   🧊 Temporada 2017-2018 ➤ Snow in: 07/11/2017 | Snow off: 11/05/2018
+   🧊 Temporada 2018-2019 ➤ Snow in: 27/11/2018 | Snow off: 01/05/2019
+   🧊 Temporada 2019-2020 ➤ Snow in: 27/11/2019 | Snow off: 15/04/2020
+   🧊 Temporada 2020-2021 ➤ Snow in: 27/09/2020 | Snow off: 15/04/2021
+   🧊 Temporada 2021-2022 ➤ Snow in: 06/11/2021 | Snow off: 25/05/2022
+   🧊 Temporada 2022-2023 ➤ Snow in: 06/11/2022 | Snow off: 10/04/2023
+   🧊 Temporada 2023-2024 ➤ Snow in: 26/11/2023 | Snow off: 19/04/2024
+   🧊 Temporada 2024-2025 ➤ Snow in: 05/12/2024 | Snow off: 24/04/2025
+✅ Procesado correctamente: Pla_de_Satari.csv
+📅 Pla_de_Sartari_periodo_nieve.csv — Periodos de nieve por temporada:
+   🧊 Temporada 2015-2016 ➤ Snow in: 03/12/2015 | Snow off: 01/05/2016
+   🧊 Temporada 2016-2017 ➤ Snow in: 27/11/2016 | Snow off: 06/04/2017
+   🧊 Temporada 2017-2018 ➤ Snow in: 07/11/2017 | Snow off: 06/04/2018
+   🧊 Temporada 2018-2019 ➤ Snow in: 27/11/2018 | Snow off: 22/03/2019
+   🧊 Temporada 2019-2020 ➤ Snow in: 17/11/2019 | Snow off: 10/02/2020
+   🧊 Temporada 2020-2021 ➤ Snow in: 27/09/2020 | Snow off: 01/03/2021
+   🧊 Temporada 2021-2022 ➤ Snow in: 06/11/2021 | Snow off: 01/03/2022
+   🧊 Temporada 2022-2023 ➤ Snow in: 26/11/2022 | Snow off: 06/03/2023
+   🧊 Temporada 2023-2024 ➤ Snow in: 29/02/2024 | Snow off: 30/03/2024
+   🧊 Temporada 2024-2025 ➤ Snow in: 15/12/2024 | Snow off: 16/04/2025
+✅ Procesado correctamente: Pleta_de_Molieres.csv
+📅 Pleta_de_Molieres_periodo_nieve.csv — Periodos de nieve por temporada:
+   🧊 Temporada 2015-2016 ➤ Snow in: 03/12/2015 | Snow off: 12/03/2016
+   🧊 Temporada 2016-2017 ➤ Snow in: 27/11/2016 | Snow off: 25/02/2017
+   🧊 Temporada 2017-2018 ➤ Snow in: 07/11/2017 | Snow off: 01/04/2018
+   🧊 Temporada 2018-2019 ➤ Snow in: 27/11/2018 | Snow off: 25/02/2019
+   🧊 Temporada 2019-2020 ➤ Snow in: 17/11/2019 | Snow off: 26/03/2020
+   🧊 Temporada 2020-2021 ➤ Snow in: 16/12/2020 | Snow off: 20/01/2021
+   🧊 Temporada 2021-2022 ➤ Snow in: 26/11/2021 | Snow off: 14/02/2022
+   🧊 Temporada 2022-2023 ➤ Snow in: 01/12/2022 | Snow off: 01/03/2023
+   🧊 Temporada 2023-2024 ➤ Snow in: 06/12/2023 | Snow off: 30/03/2024
+   🧊 Temporada 2024-2025 ➤ Snow in: 10/12/2024 | Snow off: 16/04/2025
