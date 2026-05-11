@@ -9,11 +9,11 @@ param (
 #--------------
 #variables que cal modificar si canvia l'usari
 #--------------
-$usr="farinha.mai@gmail.com"
-$psw="Img.satelite1"
+$usr="mail"
+$psw="password"
 
 #--------------
-#variables que cal modificar si volem canviar l'‡mbit de cerca o el producte
+#variables que cal modificar si volem canviar l'√†mbit de cerca o el producte
 #-------------- 
 $prod="S2MSI2A" #nivel 2A (corregido)?
 $bbox="0.67+42.42,1.14+42.43,1.13+42.72,0.67+42.71,0.67+42.42" #Pirineos Catalanes
@@ -28,8 +28,8 @@ if (-not (Test-Path $temp)) {
 }
 
 
-#Aquesta funciÛ ens retorna el token a partir de l'usuari i els password per poder fer les desc‡rregues
-#El token caduca cada 600s, per aixÚ caldr‡ demanar-lo cada cop que volguem fer desc‡rregues noves (no serveix d'un dia per l'altre)
+#Aquesta funci√≥ ens retorna el token a partir de l'usuari i els password per poder fer les desc√†rregues
+#El token caduca cada 600s, per aix√≤ caldr√† demanar-lo cada cop que volguem fer desc√†rregues noves (no serveix d'un dia per l'altre)
 function CreaToken() 
 {
     $uri = "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/protocol/openid-connect/token"
@@ -51,9 +51,9 @@ function CreaToken()
     return $tokenJson
 }
 
-#Aquesta funciÛ ens retorna el token a partir del refresh_token per poder fer les desc‡rregues
-#El token caduca cada 600s, per aixÚ caldr‡ demanar-lo cada cop que volguem fer desc‡rregues noves (no serveix d'un dia per l'altre). 
-#Com que 600s segons Ès molt poc i sempre demanem moltes desc‡rregues, no tÈ sentit controlar el temps i esperar a que caduqui per demanar-ne un de nou. El refresquem a cada nova desc‡rrega
+#Aquesta funci√≥ ens retorna el token a partir del refresh_token per poder fer les desc√†rregues
+#El token caduca cada 600s, per aix√≤ caldr√† demanar-lo cada cop que volguem fer desc√†rregues noves (no serveix d'un dia per l'altre). 
+#Com que 600s segons √©s molt poc i sempre demanem moltes desc√†rregues, no t√© sentit controlar el temps i esperar a que caduqui per demanar-ne un de nou. El refresquem a cada nova desc√†rrega
 function RegeneraToken() 
 {
     $uri = "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/protocol/openid-connect/token"
@@ -74,7 +74,7 @@ function RegeneraToken()
 
 function CallDescarrega($taula)
 {
-    # Cridem les desc‡rregues
+    # Cridem les desc√†rregues
     $taulaDesc=Import-Csv -Path $taula -Delimiter ";" -Header "ID", "ZIPname"
     $total=$taulaDesc.ID.Count
     For ($s=0;$s -lt $total; $s++){
@@ -92,14 +92,14 @@ function CallDescarrega($taula)
 function DescarregaZIP ($id, $ZIPname, $descarregues, $token, $status)
 {
     # Si la imatge que volem descarregar ja existeix, no la descarreguem. 
-    # AixÚ no hauria de passar mai si no fos perquË no est‡ clar que fa curl quan li demanes de descarregui dos cops el mateix fitxer, aixÌ que per si de cas, poso aquest if i evito repeticions.
+    # Aix√≤ no hauria de passar mai si no fos perqu√® no est√† clar que fa curl quan li demanes de descarregui dos cops el mateix fitxer, aix√≠ que per si de cas, poso aquest if i evito repeticions.
     if (Test-Path $descarregues\$ZIPname.zip -PathType Leaf){
         Write-Host "$status LA IMATGE JA EXISTEIX"
         return
     }
     else
     {
-        #rebem els par‡metres i executem curl per descarregar la imatge que ens ha arribat.
+        #rebem els par√†metres i executem curl per descarregar la imatge que ens ha arribat.
         $clau="Bearer $token"
         $url="https://catalogue.dataspace.copernicus.eu/odata/v1/Products("+$id+")/"+"$"+"value"
         $file=$descarregues+'\'+$ZIPname+'.zip'
@@ -115,16 +115,16 @@ function DescarregaZIP ($id, $ZIPname, $descarregues, $token, $status)
         $proces.WaitForExit()
 
         $size = (Get-Item $file).Length
-        #comprovem que la descarrega s'hagi completat correctament (exit code correcte i fitxer de mÈs de 100 bytes)--> Quan la descarrega falla, si no fem res queda guardat un fitxer zip de ~25bytes que en realitat Ès un json que diu {"detail":"Unauthorized"}
+        #comprovem que la descarrega s'hagi completat correctament (exit code correcte i fitxer de m√©s de 100 bytes)--> Quan la descarrega falla, si no fem res queda guardat un fitxer zip de ~25bytes que en realitat √©s un json que diu {"detail":"Unauthorized"}
         #en cas contrari eliminem el ZIP pq es torni a descarregar en un futur
         if (($proces.ExitCode -ne 0) -or ((Test-Path $file -PathType Leaf) -and ($size -le 100))) {
-                Write-Host "$status $file $size ERROR EN LA DESC¿RREGA!" 
+                Write-Host "$status $file $size ERROR EN LA DESC√ÄRREGA!" 
                 Remove-Item $file -Force
         }else{
             if(Test-Path $file -PathType Leaf){
                 Write-Host "$status $file $size FET!"
             }else{
-                Write-Host "$status $file $size ERROR: IMATGE NO DISPONIBLE?" #AixÚ no ha passat mai i no sÈ si Ès possible. En teoria si passa alguna cosa amb la desc‡rrega ho haurÌem de saber en l'if aaterior i hauriem de tenir un ExitCode diferent de 0
+                Write-Host "$status $file $size ERROR: IMATGE NO DISPONIBLE?" #Aix√≤ no ha passat mai i no s√© si √©s possible. En teoria si passa alguna cosa amb la desc√†rrega ho haur√≠em de saber en l'if aaterior i hauriem de tenir un ExitCode diferent de 0
             }
         }
     }
@@ -158,7 +158,7 @@ if ($opcio -eq "N")
     $Json=RetornaJson($url)
     #$Json | Format-List | Out-String | Write-Output
 
-    #Com que cada consulta nomÈs retorna un m‡xim de 20 resultats, $Json.'@odata.nextLink' ens dona la url de la consulta que cal fer per obtenir el seg¸ents 20 elements.
+    #Com que cada consulta nom√©s retorna un m√†xim de 20 resultats, $Json.'@odata.nextLink' ens dona la url de la consulta que cal fer per obtenir el seg√ºents 20 elements.
     $next=$Json.'@odata.nextLink'
     
     #Comprovem que no existeixi una consulta igual ja feta. En cas que exisiteixi la eliminem
@@ -170,7 +170,7 @@ if ($opcio -eq "N")
     #mentre existeixi una URL per seguir consultant elements, anem generant una llista de ids i noms de les imatges
     while ($next -ne $null)
     {
-	    $n=$Json.value.Length #aquÌ n hauria de valdre sempre 20, perÚ ho deixo aixÌ per evitar problemes si hi ha canvis.
+	    $n=$Json.value.Length #aqu√≠ n hauria de valdre sempre 20, per√≤ ho deixo aix√≠ per evitar problemes si hi ha canvis.
         for ($s=0; $s -lt $n; $s++) {
             $nomLlarg=$Json.value[$s].Name
             $nomZip=$nomLlarg.Substring(0, $nomLlarg.Length - 5)
@@ -179,7 +179,7 @@ if ($opcio -eq "N")
 	    $Json=RetornaJson($next)
 	    $next=$Json.'@odata.nextLink'
     } 
-    #En el moment en que Ès null, encara falta imprimir la ˙ltima p‡gina
+    #En el moment en que √©s null, encara falta imprimir la √∫ltima p√†gina
     $n=$Json.value.Length
     for ($s=0; $s -lt $n; $s++) {
         $nomLlarg=$Json.value[$s].Name
@@ -187,7 +187,7 @@ if ($opcio -eq "N")
 	    $Json.value[$s].id+";"+$nomZip | Out-File -FilePath $consulta -Append
     }
 
-    # Cridem les desc‡rregues
+    # Cridem les desc√†rregues
     CallDescarrega($consulta)
  }
 
@@ -198,7 +198,7 @@ if ($opcio -eq "R")
     $llistaDescarregats = "$temp\ImatgesDescarregades.csv"
     $csvSortida = "$temp\Imatges_NO_Descarregades.csv"
 
-    # Si ja existeixen llistes prËvies, les eliminem
+    # Si ja existeixen llistes pr√®vies, les eliminem
     if (Test-Path $llistaDescarregats -PathType Leaf) {
         Remove-Item $llistaDescarregats -Force
     }
@@ -206,7 +206,7 @@ if ($opcio -eq "R")
         Remove-Item $csvSortida -Force
     }
 
-    # Generem una variable que contÈ el llistat de ZIPs ja descarregats (sense extensiÛ)
+    # Generem una variable que cont√© el llistat de ZIPs ja descarregats (sense extensi√≥)
     $elementsDescarregats = Get-ChildItem -Path $descarregues -Filter "*.zip" | ForEach-Object { $_.BaseName }
 
     # Guardem el nom dels fitxers descarregats al fitxer de sortida
@@ -215,7 +215,7 @@ if ($opcio -eq "R")
     
     #2 Comparem les imatges ja descarregades amb la consulta inicial i guardem en un fitxer les que no s'han descarregat encara
     
-    # Ruta del CSV que contÈ totes les imatges entre les dates demanades que s'haurien d'haver descarregat
+    # Ruta del CSV que cont√© totes les imatges entre les dates demanades que s'haurien d'haver descarregat
     $csv1 = "$temp\$inici"+"_"+"$fi.csv"
 
     # Llegim els dos CSV i els guardem en variables
@@ -228,9 +228,9 @@ if ($opcio -eq "R")
     # Escrivim els elements no coincidents en un nou CSV
     $noCoincidents |Export-Csv -Path $csvSortida -Delimiter ";" -NoTypeInformation
     
-    # Eliminem la capÁalera del CSV de sortida
+    # Eliminem la cap√ßalera del CSV de sortida
     (Get-Content -Path $csvSortida | Select-Object -Skip 1) | Set-Content -Path $csvSortida
 
-    # Cridem les desc‡rregues
+    # Cridem les desc√†rregues
     CallDescarrega($csvSortida)
 }
