@@ -93,7 +93,7 @@ peatlands-spectral-response/
 └── README.md
 ```
 
-(***) Initial download scripts adapted from scripts available at the [Sentinel-2-Downloads repository](https://github.com/OGOGU/Sentinel-2-Downloads) by Óscar González.
+(***) Initial Sentinel-2 download scripts were adapted, with permission from the original author, from scripts available in the [Sentinel-2-Downloads repository](https://github.com/OGOGU/Sentinel-2-Downloads) by Óscar González. The adapted versions were modified for the specific download and filtering requirements of this project.
 
 ## Data availability
 
