@@ -48,7 +48,6 @@ This stage includes Python notebooks used to:
 - `archive/`  
   Exploratory scripts, alternative figure-generation notebooks, and intermediate versions not required to reproduce the final analyses.
 
-
 ## Included files
 
 This repository includes the **main files used in the core workflow**.  
@@ -93,14 +92,14 @@ peatlands-spectral-response/
 └── README.md
 ```
 
-(***) Initial Sentinel-2 download scripts were adapted, with permission from the original author, from scripts available in the [Sentinel-2-Downloads repository](https://github.com/OGOGU/Sentinel-2-Downloads) by Óscar González. The adapted versions were modified for the specific download and filtering requirements of this project.
+(***) Adapted Sentinel-2 download scripts; see the License and authorship section.
 
 ## Data availability
 
 Raw Sentinel-2 imagery is not distributed through this repository.
 
 The analyses were performed on Sentinel-2 L2A scenes covering tile `T31TCH` for the 2015–2025 period.  
-Derived climatic data were based on SPEI series obtained from AEMET-related sources.
+Derived climatic data were based on SPEI series obtained from the historical database of the Spanish Meteorological Drought Monitor, based on AEMET meteorological data.
 
 Field data used for validation are not included in this repository.
 
@@ -115,15 +114,21 @@ The workflow combines:
 The Python analyses are provided as Jupyter notebooks (.ipynb).
 Running them requires Python plus a Jupyter environment (e.g., Jupyter Notebook or JupyterLab).
 
-A `requirements.txt` file can be added for the Python environment.
+Python dependencies are listed in `requirements.txt`.
 
 ## Path configuration note
 
 Some scripts and notebooks retain project-specific local paths from the original working environment. These paths should be adapted by the user before execution in a different system. The repository is therefore intended to document the core workflow rather than provide a fully portable, end-to-end executable pipeline.
 
-## Notes on authorship and script origin
 
-Some initial Sentinel-2 download scripts were adapted from scripts available in the [Sentinel-2-Downloads repository](https://github.com/OGOGU/Sentinel-2-Downloads) by Óscar González and were later modified for this project. Unless otherwise indicated, all remaining scripts were developed by María Isabel Farinha Vieira for project-specific processing, analysis, and figure generation.
+## License and authorship
+
+Unless otherwise indicated, code developed by María Isabel Farinha Vieira for this repository is released under the MIT License.
+
+Initial Sentinel-2 download scripts were adapted, with permission from the original author, from scripts available in the [Sentinel-2-Downloads repository](https://github.com/OGOGU/Sentinel-2-Downloads) by Óscar González. These scripts were modified for the specific download and filtering requirements of this project.
+
+Raw Sentinel-2 imagery, field data, and third-party datasets are not distributed through this repository and remain subject to their respective data providers' licenses.
+
 
 ## Reproducibility note
 
