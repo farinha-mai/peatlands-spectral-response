@@ -66,7 +66,42 @@ peatlands-spectral-response/
 │   └── 8_eliminar_nodata.ps1
 │
 ├── 02_core_processing/
-│   ├── 5_bats_retalla_index_calculadora_v4_S2A_B_C.bat
+│   ├── peatlands-spectral-response/
+├── 01_download_and_filtering/
+│   ├── 00_Call_DescarreguesSentinel2_v5.ps1 (***)
+│   ├── 01_DescarreguesSentinel2_v5.ps1 (***)
+│   ├── 1_ultimas_versiones.ps1
+│   ├── 2_listado_imagenes_excluidas.ps1
+│   ├── 3_eliminar_carpetas.ps1
+│   ├── 6_auditar_no_data_archivos.bat
+│   ├── 7_auditar_no_data_CARPETAS.ps1
+│   └── 8_eliminar_nodata.ps1
+│
+├── 02_core_processing/
+│   ├── 5_bats_retalla_index_calculadora_v5_S2A_B_C.bat
+│   ├── 9_combicap_iterativo_v2.bat
+│   ├── 10_edit_csv_regdades.ps1
+│   ├── 11_edit_csv_fechas.ps1
+│   └── 12_csv_TOT_v2.ps1
+│
+├── 03_analysis_python/
+│   ├── DATA_todos_indices.ipynb
+│   ├── indices_analisis_NDSI.ipynb
+│   ├── indices_analisis_NDVI.ipynb
+│   ├── indices_analisis_NDWI_v.ipynb
+│   ├── indices_analisis_NDDI.ipynb
+│   ├── NDDI_vs_SPEI.ipynb
+│   ├── Mediana_indices_TOT_SUBSET_filtrado.ipynb
+│   └── _validacion.ipynb
+│
+├── archive/
+│   ├── exploratory_notebooks/
+│   ├── alternative_figures/
+│   └── legacy_scripts/
+│
+├── data_dictionary/
+├── requirements.txt
+└── README.md
 │   ├── 9_combicap_iterativo_v2.bat
 │   ├── 10_edit_csv_regdades.ps1
 │   ├── 11_edit_csv_fechas.ps1
